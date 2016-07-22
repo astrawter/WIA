@@ -1,0 +1,16 @@
+ul li{
+    list-style-type: none;
+}
+#styles{
+    width: 1200px;
+    margin-left: -5%;
+}
+
+#styles li{
+    display: inline-block;
+    margin-right: 5%;
+}
+
+.hide{
+    display: none;
+}

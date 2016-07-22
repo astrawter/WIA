@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Tooltipster Presentation || WIA Alexandria Strawter</title>
+		<meta name="description" content="A presentations desribing the basic use of Tooltipster">
+		<meta name="author" content="Alexandria Strawter">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+		<link rel="stylesheet" href="lib/css/styles/mono-blue.css">
+		<link rel="stylesheet" type="text/css" href="plugin/tooltipster/dist/css/tooltipster.bundle.min.css" />
+		<link rel="stylesheet" type="text/css" href="plugin/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-shadow.min.css">
+		<link rel="stylesheet" type="text/css" href="plugin/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-punk.min.css">
+		<link rel="stylesheet" type="text/css" href="plugin/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-borderless.min.css">
+		<link rel="stylesheet" type="text/css" href="plugin/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-light.min.css">
+		<link rel="stylesheet" type="text/css" href="plugin/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-noir.min.css">
+		<link rel="stylesheet" type="text/css" href="plugin/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-custom.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section>
+					<h1>Tooltipster</h1>
+					<br />
+					<ul>
+						<li class="fragment roll-in">
+							<h3 class="tooltip" title="A great way to add stylish and useful tooltips to your page!">Presented by Alexandria Strawter</h3>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h1>What is Tooltipster?</h1>
+						<p><a href="http://iamceege.github.io/tooltipster/" target="_blank"> Tooltipster </a> is a simple and easy jQuery plugin that allows you to add fun stylish tooltips to your page. It was developed by <a href="https://plus.google.com/+CalebJacob/" target="_blank">Caleb Jacob</a> and <a href="https://github.com/louisameline" target="_blank">Louis Ameline</a>.</p>
+					</section>
+					<section>
+						<h2>Tooltipster is supported by...</h2>
+						<ol>
+							<li class="fragment roll-in">Chrome</li>
+							<li class="fragment roll-in">Firefox</li>
+							<li class="fragment roll-in">Opera</li>
+							<li class="fragment roll-in">Safari</li>
+							<li class="fragment roll-in">Internet Explorer 6+</li>
+						</ol>
+					</section>
+				</section>
+
+
+				<section>
+					<section>
+						<h1>Tooltip Themes</h1>
+						<p>With tooltipster you can use the predefined styles or even create your own to match the style of your page.</p><br/>
+						<ul id="styles">
+							<li class="tooltip default" title="A tooltip styled with default">Default</li>
+							<li class="tooltip light" title="A tooltip styled with light">Light</li>
+							<li class="tooltip borderless" title="A tooltip styled with borderless">Borderless</li>
+							<li class="tooltip punk" title="A tooltip styled with punk">Punk</li>
+							<li class="tooltip noir" title="A tooltip styled with noir">Noir</li>
+							<li class="tooltip shadow" title="A tooltip styled with shadow">Shadow</li>
+							<li class="tooltip custom" title="A customized tooltip scroll down to see how it was made">Custom</li>
+						</ul>
+					</section>
+					<section>
+						<p>To create a brand new custom class you can make a new stylesheet and enter your colors here is a basic example of the css that was used to create the above tooltip</p>
+						<pre><code>.tooltipster-sidetip.tooltipster-custom .tooltipster-box {
+    border-radius: 3px;
+    border: 1px solid #586e75; /*Changes the border color*/
+    background: #fdead1; /*Changes the color of the tooltip background*/
+}
+.tooltipster-sidetip.tooltipster-custom .tooltipster-content {
+    color: #268bd2; /*Changes the color of the tooltip text*/
+}
+.tooltipster-sidetip.tooltipster-custom .tooltipster-arrow {
+    height: 9px;
+    margin-left: -9px;
+    width: 18px;
+}
+.tooltipster-sidetip.tooltipster-custom.tooltipster-left .tooltipster-arrow, .tooltipster-sidetip.tooltipster-custom.tooltipster-right .tooltipster-arrow {
+    height: 18px;
+    margin-left: 0;
+    margin-top: -9px;
+    width: 9px;
+}
+.tooltipster-sidetip.tooltipster-custom .tooltipster-arrow-background {
+    border: 9px solid transparent;
+}
+.tooltipster-sidetip.tooltipster-custom.tooltipster-bottom .tooltipster-arrow-background {
+    border-bottom-color: #fdead1; /*Changes the fill color of the arrow*/
+    top: 1px;
+}
+.tooltipster-sidetip.tooltipster-custom.tooltipster-left .tooltipster-arrow-background {
+    border-left-color: #fdead1;
+    left: -1px;
+}
+.tooltipster-sidetip.tooltipster-custom.tooltipster-right .tooltipster-arrow-background {
+    border-right-color: #fdead1;
+    left: 1px;
+}
+.tooltipster-sidetip.tooltipster-custom.tooltipster-top .tooltipster-arrow-background {
+    border-top-color: #fdead1; /*end arrow fill color*/
+    top: -1px;
+}
+.tooltipster-sidetip.tooltipster-custom .tooltipster-arrow-border {
+    border: 9px solid transparent;
+}
+.tooltipster-sidetip.tooltipster-custom.tooltipster-bottom .tooltipster-arrow-border {
+    border-bottom-color: #586e75; /*actual border of the arrow defines the arrow*/
+}
+.tooltipster-sidetip.tooltipster-custom.tooltipster-left .tooltipster-arrow-border {
+    border-left-color: #586e75;
+}
+.tooltipster-sidetip.tooltipster-custom.tooltipster-right .tooltipster-arrow-border {
+    border-right-color: #586e75;
+}
+.tooltipster-sidetip.tooltipster-custom.tooltipster-top .tooltipster-arrow-border {
+    border-top-color: #586e75;/*end arrow border*/
+}
+.tooltipster-sidetip.tooltipster-custom.tooltipster-bottom .tooltipster-arrow-uncropped {
+    top: -9px;
+}
+.tooltipster-sidetip.tooltipster-custom.tooltipster-right .tooltipster-arrow-uncropped {
+    left: -9px;
+}</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>How to use it</h1>
+						<p>To start off using tooltipster after you have the downloaded files you need to make sure to include the css and the js in your html &lt;head&gt; element</p>
+						<font size="5">The js file should be entered after jQuery file for it to properly work</font>
+						<pre><code><link rel="stylesheet" type="text/css" href="tooltipster/dist/css/tooltipster.bundle.min.css" />
+
+<link rel="stylesheet" type="text/css" href="plugin/tooltipster/dist/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-custom.css">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+
+<script type="text/javascript" src="tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+
+</code></pre>
+					</section>
+					<section>
+						<h2>Placing a tooltip in your html</h2>
+						<p>To actually create a tooltip you want to create a class of "tooltip" and a title which would contain the content that is shown</p><br/>
+						<h3>Example</h3>
+						<p class="tooltip" title="I am the tooltip!">Hello I am a paragraph with a tooltip</p>
+						<pre><code>&lt;p class="tooltip" title="I am the tooltip!"&gt;Hello I am a paragraph with a tooltip&lt;/p&gt;</code></pre><br/>
+						<p>But wait...that doesn't look like any of the tooltips we've seen <a href="#/2">before!?</a> That's because we haven't activated it yet</p>
+					</section>
+					<section>
+						<h2>Activating the tooltip</h2>
+						<p>You can create a new js file or you can enter your script right before the closing &lt;body&gt; tag. Just make sure to create a document ready function and then call tooltipster</p>
+						<font size="5">You can use any element to call it but for this example we will call it by the class <code>.tooltip</code></font><br/>
+						<font size="4">When you call tooltipster you can set the theme to whichever style you like best. In this case we are using the default</font>
+						<pre><code>$(document).ready(function() {
+	$('.tooltip').tooltipster({
+		theme: 'tooltipster-default'
+	});
+});</code></pre>
+						<p class="tooltip default" title="I am the working tooltip!">Hello I am a paragraph with a tooltip</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>What else can it do?</h1>
+						<p>Now that we know the basics of tooltipster let's see some other ways it can be used. We can start off by adding an image to it.</p>
+						<h3>Example</h3>
+						<p data-tooltip-content="#demo-html-content" id="images">Want to see something cute?</p>
+						<div class="hide" >
+							<div id="demo-html-content">
+								<img src="images/image.png" width="215" height="215" />
+								<p style="text-align:left;">
+									<strong>The Beautiful Zaria</strong><br />
+									Here is a picture of my daughter in a tooltip.
+								</p>
+							</div>
+						</div>
+						<pre><code><p data-tooltip-content="#demo-html-content" id="images">Want to see something cute?</p>&lt;!--call the hidden content to be used in the tooltip--&gt;
+<div class="hide">&lt;!--make sure to set the content to display none--&gt;
+	<div id="demo-html-content">
+		<img src="images/image.png" width="215" height="215" />
+		<p style="text-align:left;">
+		<strong>The Beautiful Zaria</strong><br />
+		Here is a picture of my daughter in a tooltip.
+		</p>
+	</div>
+</div></code></pre>
+						<pre><code>//the script used to activate it would be
+$('#images').tooltipster({});</code></pre>
+					</section>
+					<section>
+						<h2>Making a tooltip into a link</h2><br/>
+						<h3>Example</h3>
+						<p id="linkable" title="Wow it's a &lt;a href='https://www.fullsail.edu/' target='_blank'&gt;link&lt;/a&gt;">I wonder what this does...</p>
+						<pre><code><p id="linkable" title="Wow it's a &lt;a href='https://www.fullsail.edu/' target='_blank'&gt;link&lt;/a&gt;">I wonder what this does...</p></code></pre>
+						<pre><code>$('#linkable').tooltipster({
+	contentAsHTML: true,
+	interactive: true,
+	animation: 'fall', //'fade', 'grow', 'swing', 'slide', 'fall'
+	side: 'bottom' //'top', 'bottom', 'right', 'left'
+});</code></pre>
+						<font size="5">Setting <code>contentAsHTML </code> changings the text from a string into actual html when set to true. <code>interactive </code> does just what it says if you want the user to interact with the tooltip in anyway set this to true. We also added animation in this one I chose the fall effect and placed it on the bottom. This makes the tooltip seem to be falling from the top of the page to the bottom of the element.</font>
+					</section>
+					<section>
+						<h2>Clicking for a tooltip</h2>
+						<p>Simple as it sounds you can use a click or keypress to open/close the tooltip</p><br/>
+						<h3>Example</h3>
+						<p id="click" title="To close me press something on your keyboard now!">Just click me!</p>
+						<pre><code><p id="click" title="To close me press something on your keyboard now!">Just click me!</p></code></pre>
+						<pre><code>$('#click').tooltipster({
+	trigger: 'click' //'hover','click', 'custom'
+});
+
+$(window).keypress(function() {
+	$('#click').tooltipster('hide');
+});</code></pre>
+					</section>
+					<section>
+						<h2>Multiple tooltips</h2>
+						<h3>Example</h3>
+						<p id="fourTips">Oh my look at all these tips! Which one should I read first?</p>
+						<pre><code><p id="fourTips">Oh my look at all these tips! Which one should I read first?</p></code></pre>
+						<pre><code>var $four= $('#fourTips');
+$four.tooltipster({
+	content: 'Top', //set the content that would appear with each tooltip
+	side: 'top', //set the side you want to show the tooltip
+	theme: 'tooltipster-custom' //select the theme for the tooltip
+});  //you could also add an animation for each tooltip
+$four.tooltipster({
+	content: 'Right',
+	multiple: true,
+	side: 'right',
+	theme: 'tooltipster-shadow',
+});
+$four.tooltipster({
+	content: 'Bottom',
+	multiple: true,
+	side: 'bottom',
+	theme: 'tooltipster-custom'
+});
+$four.tooltipster({
+	content: 'Left',
+	multiple: true,
+	side: 'left',
+	theme: 'tooltipster-shadow'
+});</code></pre>
+					</section>
+				</section>
+				<section>
+					<h1>Why did I create this?</h1>
+					<p>I thought some of the abilities of this plugin where cool and very useful. I only covered the bare minimum but there is so much more that can be done. This takes tooltips to a new level and I think it is something that I will be using in the future.</p>
+					<a href="https://youtu.be/9Lid4E8PeQk" target="_blank">https://youtu.be/9Lid4E8PeQk</a>
+				</section>
+			</div>
+		</div>
+
+		<script src="plugin/jquery/jquery-1.12.4.min.js"></script>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script type="text/javascript" src="plugin/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('h3, .shadow').tooltipster({
+					theme: 'tooltipster-shadow'
+				});
+				$('.custom').tooltipster({
+					theme: 'tooltipster-custom'
+				});
+				$('.default').tooltipster({
+					theme: 'tooltipster-default'
+				});
+				$('.borderless').tooltipster({
+					theme: 'tooltipster-borderless'
+				});
+				$('.punk').tooltipster({
+					theme: 'tooltipster-punk'
+				});
+				$('.noir').tooltipster({
+					theme: 'tooltipster-noir'
+				});
+				$('.light').tooltipster({
+					theme: 'tooltipster-light'
+				});
+
+				$('#images').tooltipster({
+					minWidth: 43,
+					maxWidth: 300
+				});
+
+				$('#linkable').tooltipster({
+					contentAsHTML: true,
+					theme: 'tooltipster-custom',
+					interactive: true,
+					animation: 'fall',
+					side: 'bottom'
+				});
+
+				$('#click').tooltipster({
+					trigger: 'click'
+				});
+
+				$(window).keypress(function() {
+					$('#click').tooltipster('hide');
+				});
+
+				var $four= $('#fourTips');
+				$four.tooltipster({
+					content: 'Top',
+					side: 'top',
+					theme: 'tooltipster-custom'
+				});
+				$four.tooltipster({
+					content: 'Right',
+					multiple: true,
+					side: 'right',
+					theme: 'tooltipster-shadow',
+				});
+				$four.tooltipster({
+					content: 'Bottom',
+					multiple: true,
+					side: 'bottom',
+					theme: 'tooltipster-custom'
+				});
+				$four.tooltipster({
+					content: 'Left',
+					multiple: true,
+					side: 'left',
+					theme: 'tooltipster-shadow'
+				});
+
+			});
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				theme: Reveal.getQueryHash().theme || 'solarized',
+				transition: Reveal.getQueryHash().transition || 'linear',
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/print-pdf/print-pdf.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+	</body>
+</html>
